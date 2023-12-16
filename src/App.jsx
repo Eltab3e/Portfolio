@@ -1,45 +1,43 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import {
+    Navbar,
+    Hero,
+    About,
+    AboutMobile,
+    Path,
+    Projects,
+    ProjectsMobile,
+    Tech,
+    TechMobile,
+    Contact,
+    StarsCanvas,
+    Footer,
+} from "./components";
 
-function App() {
-    const [count, setCount] = useState(0);
+const App = () => {
+    const isMobile = window.innerWidth <= 860;
 
     return (
-        <>
-            <div>
-                <a
-                    href="https://vitejs.dev"
-                    target="_blank"
-                >
-                    <img
-                        src={viteLogo}
-                        className="logo"
-                        alt="Vite logo"
-                    />
-                </a>
-                <a
-                    href="https://react.dev"
-                    target="_blank"
-                >
-                    <img
-                        src={reactLogo}
-                        className="logo react"
-                        alt="React logo"
-                    />
-                </a>
+        <BrowserRouter>
+            <div className="relative z-0 bg-primary">
+                <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                    <Navbar />
+                    <Hero />
+                </div>
+
+                {isMobile ? <AboutMobile /> : <About />}
+                <Path />
+                {isMobile ? <TechMobile /> : <Tech />}
+                {isMobile ? <ProjectsMobile /> : <Projects />}
+
+                <div className="relative z-0">
+                    <Contact />
+                    <StarsCanvas />
+                    <Footer />
+                </div>
             </div>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-                <p>
-                    Edit <code>src/App.jsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
-        </>
+        </BrowserRouter>
     );
-}
+};
 
 export default App;
