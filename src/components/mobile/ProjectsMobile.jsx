@@ -47,18 +47,10 @@ const ProjectsMobile = () => {
 
             <div className="w-full flex">
                 <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-                    Here are the projects I&apos;ve worked on. They range from simple React websites
-                    to Full-Stack applications that utilize different technologies and frameworks.{" "}
-                    <br />
-                    By challenging myself to work with different technologies, I&apos;ve been able
-                    to learn a lot and improve my skills. <br />
-                    The projects also utilize different types of Databases that have helped expand
-                    my knowledge of SQL and NoSQL databases. <br />
-                    Each project is on GitHub but also deployed for viewing on Vercel or other
-                    hosting platforms. <br />
-                    I&apos;m always looking for new opportunities to learn and grow as a developer,
-                    so if you have any ideas or projects you&apos;d like to collaborate on, please
-                    feel free to contact me.
+                    Following projects showcases my skills and experience through real-world
+                    examples of my work. Each project is briefly described with links to code
+                    repositories and live demos in it. It reflects my ability to solve complex
+                    problems, work with different technologies, and manage projects effectively.
                 </p>
             </div>
 

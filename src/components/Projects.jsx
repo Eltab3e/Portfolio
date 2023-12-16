@@ -4,15 +4,12 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { githublogo } from "../assets";
 import SectionWrapper from "../hoc/SectionWrapper";
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
     return (
-        <motion.div
-            variants={fadeIn("up", "spring", index * 0.5, 0.75)}
-            className="cursor-pointer"
-            onClick={() => window.open(source_code_link, "_blank")}
-        >
+        <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
             <Tilt
                 options={{
                     max: 45,
@@ -21,12 +18,25 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
                 }}
                 className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
             >
-                <div className="relative w-full h-[230px]">
+                <div className="relative w-full h-[250px]">
                     <img
                         src={image}
                         alt="project_image"
                         className="w-full h-full object-cover rounded-2xl"
                     />
+
+                    <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+                        <div
+                            onClick={() => window.open(source_code_link, "_blank")}
+                            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
+                        >
+                            <img
+                                src={githublogo}
+                                alt="source code"
+                                className="w-1/2 h-1/2 object-contain"
+                            />
+                        </div>
+                    </div>
                 </div>
 
                 <div className="mt-5">

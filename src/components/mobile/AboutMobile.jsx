@@ -25,12 +25,12 @@ const AboutMobile = () => {
             </div>
 
             <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-                I&apos;m a Professional Certified Full-Stack Software Engineer by Meta, driven by a
-                passion for technology, learning, and development. My enthusiasm for technology
-                began early in my life when I built my first PC at the age of 13, and since then,
-                I&apos;ve been interested in coding and databases. <br />I love working out, playing
-                games and learning new things. <br /> I view every day as an opportunity to learn
-                something new and grow as a person.
+                I'm an Enthusiastic and motivated self-taught frontend developer, passionate about
+                exploring and utilizing modern technologies to create exceptional digital
+                experiences. My expertise lies in working with popular frameworks like React,
+                Next.js, and Three.js, allowing me to craft visually stunning and interactive
+                websites. I thrive on the challenge of solving complex problems with elegant and
+                simplified solutions.
             </p>
 
             <div className="mt-20 flex flex-wrap gap-10">

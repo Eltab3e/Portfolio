@@ -26,9 +26,9 @@ const App = () => {
                 </div>
 
                 {isMobile ? <AboutMobile /> : <About />}
+                {isMobile ? <ProjectsMobile /> : <Projects />}
                 <Path />
                 {isMobile ? <TechMobile /> : <Tech />}
-                {isMobile ? <ProjectsMobile /> : <Projects />}
 
                 <div className="relative z-0">
                     <Contact />
