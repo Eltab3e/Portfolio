@@ -55,7 +55,7 @@ const Path = () => {
     return (
         <>
             <motion.div variants={textVariant()}>
-                <p className={`${styles.sectionSubText} `}>What I Have Done So Far</p>
+                <p className={`${styles.sectionSubText} `}>Learning Path</p>
                 <h2 className={`${styles.sectionHeadText}`}>Courses & Certifications.</h2>
             </motion.div>
 
