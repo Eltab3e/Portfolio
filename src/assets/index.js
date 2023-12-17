@@ -32,11 +32,8 @@ import rtk from "./tech/rtk.png";
 import styledcomponents from "./tech/styledcomponents.png";
 import tailwind from "./tech/tailwind.png";
 import sass from "./tech/sass.png";
-import figma from "./tech/figma.png";
-import git from "./tech/git.png";
 import github from "./tech/github.png";
 import threejs from "./tech/threejs.png";
-import jest from "./tech/jest.png";
 
 export {
     icon1,
@@ -67,11 +64,8 @@ export {
     reactquery,
     rtk,
     styledcomponents,
-    tailwind,
     sass,
-    figma,
-    git,
+    tailwind,
     github,
     threejs,
-    jest,
 };

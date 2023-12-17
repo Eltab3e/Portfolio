@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -5,7 +6,22 @@ import { mobilebg } from "../assets/index.js";
 import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
-    const isMobile = window.innerWidth <= 860;
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 500px)");
+
+        const handleMediaQueryChange = (event) => {
+            setIsMobile(event.matches);
+        };
+
+        setIsMobile(mediaQuery.matches);
+        mediaQuery.addEventListener("change", handleMediaQueryChange);
+
+        return () => {
+            mediaQuery.removeEventListener("change", handleMediaQueryChange);
+        };
+    }, []);
 
     return (
         <section className="relative w-full h-screen mx-auto">
@@ -13,9 +29,10 @@ const Hero = () => {
                 className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
             >
                 <div className="flex flex-col justify-center items-center mt-5">
-                    <div className="w-5 h-5 rounded-full bg-[#915eff]" />
+                    <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
                     <div className="w-1 sm:h-80 h-40 violet-gradient" />
                 </div>
+
                 <div>
                     <h1 className={`${styles.heroHeadText} text-white`}>
                         Hi, I'm <span className="text-[#915EFF]">Ahmed</span>
@@ -30,8 +47,17 @@ const Hero = () => {
             {!isMobile && <ComputersCanvas />}
 
             <div className="absolute xs:bottom-10 bottom-32 w-full flex flex-col justify-center items-center">
-                {isMobile && <img src={mobilebg} />}
-                <a href="#about">
+                {isMobile && (
+                    <img
+                        src={mobilebg}
+                        className="w-full h-[230px] px-4"
+                        alt="placeholder"
+                    />
+                )}
+                <a
+                    href="#about"
+                    aria-label="Scroll"
+                >
                     <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
                         <motion.div
                             animate={{

@@ -16,11 +16,8 @@ import {
     styledcomponents,
     sass,
     tailwind,
-    figma,
     github,
-    git,
     threejs,
-    jest,
     gamescope,
     carhub,
     astronime,
@@ -43,6 +40,10 @@ const navLinks = [
     {
         id: "path",
         title: "Path",
+    },
+    {
+        id: "tech",
+        title: "Tech",
     },
     {
         id: "contact",
@@ -107,6 +108,10 @@ const technologies = [
         icon: styledcomponents,
     },
     {
+        name: "SASS",
+        icon: sass,
+    },
+    {
         name: "Tailwind CSS",
         icon: tailwind,
     },
@@ -117,10 +122,6 @@ const technologies = [
     {
         name: "Three JS",
         icon: threejs,
-    },
-    {
-        name: "Jest",
-        icon: jest,
     },
 ];
 

@@ -27,7 +27,9 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
+            className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${
+                scrolled ? "bg-primary" : "bg-transparent"
+            }`}
         >
             <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
                 <Link
@@ -43,11 +45,12 @@ const Navbar = () => {
                         alt="logo"
                         className="w-9 h-9 object-contain"
                     />
-                    <p className="text-white text-[18px] font-bold cursor-pointer flex">
+                    <p className="text-white text-[18px] font-bold cursor-pointer flex ">
                         Ahmed &nbsp;
-                        <span className="sm:block hidden">|| &nbsp;Web Developer</span>
+                        <span className="sm:block hidden"> || &nbsp;Web Developer</span>
                     </p>
                 </Link>
+
                 <ul className="list-none hidden sm:flex flex-row gap-10">
                     {navLinks.map((link) => (
                         <li
@@ -61,13 +64,15 @@ const Navbar = () => {
                         </li>
                     ))}
                 </ul>
+
                 <div className="sm:hidden flex flex-1 justify-end items-center">
                     <img
                         src={toggle ? close : menu}
                         alt="menu"
-                        className="w-[28px] h-[28px] object-contain cursor-pointer"
+                        className="w-[28px] h-[28px] object-contain"
                         onClick={() => setToggle(!toggle)}
                     />
+
                     <div
                         className={`${
                             !toggle ? "hidden" : "flex"
@@ -77,9 +82,9 @@ const Navbar = () => {
                             {navLinks.map((link) => (
                                 <li
                                     key={link.id}
-                                    className={`${
+                                    className={`font-poppins font-medium cursor-pointer text-[16px] ${
                                         active === link.title ? "text-white" : "text-secondary"
-                                    } font-poppins font-medium cursor-pointer text-[16px]`}
+                                    }`}
                                     onClick={() => {
                                         setToggle(!toggle);
                                         setActive(link.title);

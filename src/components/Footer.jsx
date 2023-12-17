@@ -16,7 +16,7 @@ function Footer() {
                             <img
                                 src={link.icon}
                                 alt={link.name}
-                                style={{ width: "35px" }}
+                                style={{ width: "35px", height: "35px" }}
                             />
                         )}
                     </a>

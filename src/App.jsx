@@ -3,20 +3,15 @@ import {
     Navbar,
     Hero,
     About,
-    AboutMobile,
-    Path,
     Projects,
-    ProjectsMobile,
+    Path,
     Tech,
-    TechMobile,
     Contact,
-    StarsCanvas,
     Footer,
+    StarsCanvas,
 } from "./components";
 
 const App = () => {
-    const isMobile = window.innerWidth <= 860;
-
     return (
         <BrowserRouter>
             <div className="relative z-0 bg-primary">
@@ -25,10 +20,10 @@ const App = () => {
                     <Hero />
                 </div>
 
-                {isMobile ? <AboutMobile /> : <About />}
-                {isMobile ? <ProjectsMobile /> : <Projects />}
+                <About />
+                <Projects />
                 <Path />
-                {isMobile ? <TechMobile /> : <Tech />}
+                <Tech />
 
                 <div className="relative z-0">
                     <Contact />
