@@ -320,7 +320,7 @@ const footerlinks = [
     },
     {
         name: "Resume",
-        link: "https://drive.google.com/file/d/1Je9Z3IWT-wX8E4ISm6FryKikcFFM-R6Q/view",
+        link: "https://drive.google.com/file/d/1QQZIG3G0yR1Qs7m_sFg6O9BWjvJYiKZ_/view",
         icon: "CV",
     },
     {
