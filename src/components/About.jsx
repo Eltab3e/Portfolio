@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { services } from "../constants";
-import SectionWrapper from "../hoc/SectionWrapper";
 import { fadeIn, textVariant } from "../utils/motion";
+import SectionWrapper from "../hoc/SectionWrapper";
 
 const AboutCard = ({ index, title, icon }) => {
     const [isMobile, setIsMobile] = useState(false);
@@ -44,7 +43,7 @@ const AboutCard = ({ index, title, icon }) => {
                     </div>
                 </div>
             ) : (
-                <Tilt className="xs:w-[250px] w-full">
+                <div className="xs:w-[250px] w-full">
                     <motion.div
                         variants={fadeIn("right", "spring", index * 0.5, 0.75)}
                         className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
@@ -68,7 +67,7 @@ const AboutCard = ({ index, title, icon }) => {
                             </h3>
                         </div>
                     </motion.div>
-                </Tilt>
+                </div>
             )}
         </>
     );
@@ -79,19 +78,35 @@ const About = () => {
         <>
             <motion.div variants={textVariant()}>
                 <p className={styles.sectionSubText}>Introduction</p>
-                <h2 className={styles.sectionHeadText}>Overview.</h2>
+                <h2 className={styles.sectionHeadText}>Overview</h2>
             </motion.div>
 
             <motion.p
                 variants={fadeIn("", "", 0.1, 1)}
                 className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
             >
-                I'm an Enthusiastic and motivated self-taught frontend developer, passionate about
-                exploring and utilizing modern technologies to create exceptional digital
-                experiences. My expertise lies in working with popular frameworks like React,
-                Next.js, and Three.js, allowing me to craft visually stunning and interactive
-                websites. I thrive on the challenge of solving complex problems with elegant and
-                simplified solutions.
+                A self-taught Front-end Developer with 1 year of hands-on experience, passionate
+                about tackling complex challenges, creating user-friendly interfaces, and crafting
+                exceptional, visually appealing user experiences prioritizing usability and
+                performance. <br />
+                <br />
+                My expertise lies in working with popular frameworks like{" "}
+                <a
+                    href="https://react.dev/"
+                    className="text-[#915eff]"
+                >
+                    React
+                </a>{" "}
+                and{" "}
+                <a
+                    href="https://nextjs.org/"
+                    className="text-[#915eff]"
+                >
+                    Next.js
+                </a>
+                , allowing me to craft visually stunning and interactive websites. I thrive in
+                collaborative environments and actively seek opportunities to collaborate within
+                dynamic teams.
             </motion.p>
 
             <div className="mt-20 flex flex-wrap justify-center gap-10">

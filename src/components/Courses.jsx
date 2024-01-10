@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import "react-vertical-timeline-component/style.min.css";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 
 import { styles } from "../styles";
-import { path } from "../constants";
+import { courses } from "../constants";
 import { textVariant } from "../utils/motion";
 import SectionWrapper from "../hoc/SectionWrapper";
 
-const PathCard = ({ path }) => {
+const CourseCard = ({ title, company_name, icon, iconBg, date, points }) => {
     return (
         <VerticalTimelineElement
             contentStyle={{
@@ -15,32 +15,32 @@ const PathCard = ({ path }) => {
                 color: "#fff",
             }}
             contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-            date={path.date}
-            iconStyle={{ background: path.iconBg }}
+            date={date}
+            iconStyle={{ background: iconBg }}
             icon={
                 <div className="flex justify-center items-center w-full h-full">
                     <img
-                        src={path.icon}
-                        alt={path.company_name}
+                        src={icon}
+                        alt={company_name}
                         className="w-[60%] h-[60%] object-contain"
                     />
                 </div>
             }
         >
             <div>
-                <h3 className="text-white text-[24px] font-bold">{path.title}</h3>
+                <h3 className="text-white text-[24px] font-bold">{title}</h3>
                 <p
                     className="text-secondary text-[16px] font-semibold"
                     style={{ margin: 0 }}
                 >
-                    {path.company_name}
+                    {company_name}
                 </p>
             </div>
 
             <ul className="mt-5 list-disc ml-5 space-y-2">
-                {path.points.map((point, index) => (
+                {points.map((point, index) => (
                     <li
-                        key={`path-point-${index}`}
+                        key={`courses-point-${index}`}
                         className="text-white-100 text-[14px] pl-1 tracking-wider"
                     >
                         {point}
@@ -51,21 +51,21 @@ const PathCard = ({ path }) => {
     );
 };
 
-const Path = () => {
+const Courses = () => {
     return (
         <>
             <motion.div variants={textVariant()}>
-                <p className={styles.sectionSubText}>Courses & Certifications.</p>
-                <h2 className={styles.sectionHeadText}>Learning Path.</h2>
+                <p className={styles.sectionSubText}>Learning Path</p>
+                <h2 className={styles.sectionHeadText}>Courses & Certifications</h2>
             </motion.div>
 
             <div className="mt-20 flex flex-col">
                 <VerticalTimeline>
-                    {path.map((path, index) => (
-                        <PathCard
-                            key={`path-${index}`}
+                    {courses.map((course, index) => (
+                        <CourseCard
+                            key={`courses-${index}`}
                             index={index}
-                            path={path}
+                            {...course}
                         />
                     ))}
                 </VerticalTimeline>
@@ -74,4 +74,4 @@ const Path = () => {
     );
 };
 
-export default SectionWrapper(Path, "path");
+export default SectionWrapper(Courses, "courses");

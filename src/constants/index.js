@@ -28,6 +28,7 @@ import {
     realtor,
     linkedin,
     githublogo,
+    resume,
 } from "../assets";
 
 const navLinks = [
@@ -44,8 +45,8 @@ const navLinks = [
         title: "Projects",
     },
     {
-        id: "path",
-        title: "Path",
+        id: "courses",
+        title: "Courses",
     },
     {
         id: "tech",
@@ -59,7 +60,7 @@ const navLinks = [
 
 const services = [
     {
-        title: "Frontend Developer",
+        title: "Front-end Developer",
         icon: icon1,
     },
     {
@@ -67,12 +68,12 @@ const services = [
         icon: icon2,
     },
     {
-        title: "SEO Expert",
-        icon: icon3,
+        title: "UI/UX",
+        icon: icon4,
     },
     {
-        title: "UI / UX",
-        icon: icon4,
+        title: "SEO Expert",
+        icon: icon3,
     },
 ];
 
@@ -131,7 +132,7 @@ const technologies = [
     },
 ];
 
-const experience = [
+const experiences = [
     {
         title: "Front-end Developer",
         company_name: "Bona Invest",
@@ -162,7 +163,7 @@ const experience = [
     },
 ];
 
-const path = [
+const courses = [
     {
         title: "CS50: Introduction to Computer Science",
         company_name: "edX",
@@ -358,7 +359,7 @@ const footerlinks = [
     {
         name: "Resume",
         link: "https://drive.google.com/file/d/1QQZIG3G0yR1Qs7m_sFg6O9BWjvJYiKZ_/view",
-        icon: "CV",
+        icon: resume,
     },
     {
         name: "Github",
@@ -367,4 +368,4 @@ const footerlinks = [
     },
 ];
 
-export { navLinks, services, experience, technologies, path, projects, footerlinks };
+export { navLinks, services, experiences, technologies, courses, projects, footerlinks };

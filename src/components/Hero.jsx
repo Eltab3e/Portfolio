@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { mobilebg } from "../assets/index.js";
 import { ComputersCanvas } from "./canvas";
+import { mobilebg } from "../assets/index.js";
 
 const Hero = () => {
     const [isMobile, setIsMobile] = useState(false);

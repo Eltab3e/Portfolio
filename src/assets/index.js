@@ -7,7 +7,8 @@ import bona from "./experience/bona.svg";
 import upwork from "./experience/upwork.svg";
 
 import githublogo from "./footer/githublogo.png";
-import linkedin from "./footer/linkedin.png";
+import linkedin from "./footer/linkedin.svg";
+import resume from "./footer/resume.png";
 
 import logo from "./others/logo.svg";
 import cs50 from "./others/cs50.png";
@@ -46,6 +47,7 @@ export {
     bona,
     upwork,
     githublogo,
+    resume,
     linkedin,
     logo,
     cs50,
