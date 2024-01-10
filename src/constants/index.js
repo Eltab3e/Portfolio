@@ -3,6 +3,8 @@ import {
     icon2,
     icon3,
     icon4,
+    bona,
+    upwork,
     cs50,
     udacity,
     html,
@@ -32,6 +34,10 @@ const navLinks = [
     {
         id: "about",
         title: "About",
+    },
+    {
+        id: "experience",
+        title: "Experience",
     },
     {
         id: "projects",
@@ -122,6 +128,37 @@ const technologies = [
     {
         name: "Three JS",
         icon: threejs,
+    },
+];
+
+const experience = [
+    {
+        title: "Front-end Developer",
+        company_name: "Bona Invest",
+        icon: bona,
+        iconBg: "#E6DEDD",
+        date: "Jun 2023 - Present",
+        points: [
+            "Designed and crafted components and pages prioritizing a user-friendly and responsive interface.",
+            "Implemented robust user authentication and secure routes for data privacy.",
+            "Devised logic to restrict non-market hour purchases, enhancing user experience.",
+            "Conducted extensive testing and debugging to ensure system reliability.",
+            "Leveraged the Moment package for precise time formatting, improving user awareness of market hours and investment opportunities.",
+            "Collaborated closely with backend teams to ensure seamless data flow for real-time updates and transactions.",
+        ],
+    },
+    {
+        title: "Front-end Developer",
+        company_name: "Upwork",
+        icon: upwork,
+        iconBg: "#E6DEDD",
+        date: "Feb 2023 - Present",
+        points: [
+            "Transformed Figma design concepts into dynamic, responsive React applications.",
+            "Ensured seamless cross-browser compatibility and responsiveness across various devices.",
+            "Utilized Git for version control, facilitating collaboration and code management throughout the development process.",
+            "Employed advanced optimization strategies like lazy loading and code splitting to enhance loading times and user experiences.",
+        ],
     },
 ];
 
@@ -330,4 +367,4 @@ const footerlinks = [
     },
 ];
 
-export { navLinks, services, technologies, path, projects, footerlinks };
+export { navLinks, services, experience, technologies, path, projects, footerlinks };

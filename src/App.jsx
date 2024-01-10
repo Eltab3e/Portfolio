@@ -3,6 +3,7 @@ import {
     Navbar,
     Hero,
     About,
+    Experience,
     Projects,
     Path,
     Tech,
@@ -21,6 +22,7 @@ const App = () => {
                 </div>
 
                 <About />
+                <Experience />
                 <Projects />
                 <Path />
                 <Tech />
