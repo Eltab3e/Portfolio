@@ -16,10 +16,10 @@ import {
     reactquery,
     rtk,
     styledcomponents,
-    sass,
     tailwind,
+    sass,
+    jest,
     github,
-    threejs,
     gamescope,
     carhub,
     astronime,
@@ -27,8 +27,8 @@ import {
     gpt3,
     realtor,
     linkedin,
-    githublogo,
     resume,
+    githublogo,
 } from "../assets";
 
 const navLinks = [
@@ -60,30 +60,30 @@ const navLinks = [
 
 const services = [
     {
-        title: "Front-end Developer",
+        title: "Front-end Development",
         icon: icon1,
     },
     {
-        title: "Web Designer",
+        title: "Testing and Debugging",
         icon: icon2,
     },
     {
-        title: "UI/UX",
+        title: "Accessibility Enhancement",
         icon: icon4,
     },
     {
-        title: "SEO Expert",
+        title: "SEO Optimization",
         icon: icon3,
     },
 ];
 
 const technologies = [
     {
-        name: "HTML 5",
+        name: "HTML",
         icon: html,
     },
     {
-        name: "CSS 3",
+        name: "CSS",
         icon: css,
     },
     {
@@ -103,32 +103,32 @@ const technologies = [
         icon: next,
     },
     {
-        name: "Redux Toolkit",
-        icon: rtk,
-    },
-    {
         name: "React Query",
         icon: reactquery,
+    },
+    {
+        name: "Redux Toolkit",
+        icon: rtk,
     },
     {
         name: "Styled Components",
         icon: styledcomponents,
     },
     {
-        name: "SASS",
-        icon: sass,
-    },
-    {
         name: "Tailwind CSS",
         icon: tailwind,
     },
     {
-        name: "Github",
-        icon: github,
+        name: "SASS",
+        icon: sass,
     },
     {
-        name: "Three JS",
-        icon: threejs,
+        name: "Jest",
+        icon: jest,
+    },
+    {
+        name: "Github",
+        icon: github,
     },
 ];
 
@@ -138,13 +138,11 @@ const experiences = [
         company_name: "Bona Invest",
         icon: bona,
         iconBg: "#E6DEDD",
-        date: "Jun 2023 - Present",
+        date: "Apr 2023 - May 2024",
         points: [
-            "Designed and crafted components and pages prioritizing a user-friendly and responsive interface.",
-            "Implemented robust user authentication and secure routes for data privacy.",
-            "Devised logic to restrict non-market hour purchases, enhancing user experience.",
             "Conducted extensive testing and debugging to ensure system reliability.",
-            "Leveraged the Moment package for precise time formatting, improving user awareness of market hours and investment opportunities.",
+            "Implemented robust user authentication and secure routes for data privacy.",
+            "Designed and crafted components and pages prioritizing a user-friendly and responsive interface.",
             "Collaborated closely with backend teams to ensure seamless data flow for real-time updates and transactions.",
         ],
     },
@@ -153,12 +151,12 @@ const experiences = [
         company_name: "Upwork",
         icon: upwork,
         iconBg: "#E6DEDD",
-        date: "Feb 2023 - Present",
+        date: "Dec 2022 - Apr 2023",
         points: [
             "Transformed Figma design concepts into dynamic, responsive React applications.",
             "Ensured seamless cross-browser compatibility and responsiveness across various devices.",
             "Utilized Git for version control, facilitating collaboration and code management throughout the development process.",
-            "Employed advanced optimization strategies like lazy loading and code splitting to enhance loading times and user experiences.",
+            "Employed advanced optimization strategies enhancing loading times by up to 50% and improving overall user experiences.",
         ],
     },
 ];
@@ -169,7 +167,6 @@ const courses = [
         company_name: "edX",
         icon: cs50,
         iconBg: "#E6DEDD",
-        date: "March 2022 - May 2022",
         points: [
             "Acquired a broad and comprehensive understanding of computer science and programming.",
             "Developed the ability to think algorithmically and efficiently solve programming problems.",
@@ -178,11 +175,10 @@ const courses = [
         ],
     },
     {
-        title: "Front End Web Developer Nanodegree Program",
+        title: "Front-end Development Nano-degree Program",
         company_name: "Udacity",
         icon: udacity,
         iconBg: "#383E56",
-        date: "May 2022 - Sept 2022",
         points: [
             "Explored a variety of JavaScript design patterns and developed proficiency in utilizing popular developer tools, testing suites, and frameworks.",
             "Showcased and honed my skills through engaging in-class projects.",
@@ -191,11 +187,10 @@ const courses = [
         ],
     },
     {
-        title: "ReactJS",
-        company_name: "Udemy",
+        title: "Web Development Bootcamp 1",
+        company_name: "Scrimba",
         icon: reactjs,
         iconBg: "#383E56",
-        date: "Sept 2022 - Feb 2023",
         points: [
             "Successfully developed robust and high-performance web applications that deliver exceptional user experiences with their speed, responsiveness, and user-friendly interfaces.",
             "Mastered React functional components, implemented optimized file and folder structures, and adhered to the CSS BEM model for efficient styling and maintainability.",
@@ -204,11 +199,10 @@ const courses = [
         ],
     },
     {
-        title: "Next.js",
+        title: "Web Development Bootcamp 2",
         company_name: "Udemy",
         icon: next,
         iconBg: "#E6DEDD",
-        date: "Feb 2023 - Present",
         points: [
             "Acquired a comprehensive understanding of essential Next.js features, including pre-rendering techniques, server-side rendering (SSR), efficient data fetching, file-based routing, and authentication mechanisms.",
             "Developed proficiency in building both client-side and full-stack React.js applications using Next.js, leveraging its powerful capabilities and seamless integration with React.",
@@ -358,7 +352,7 @@ const footerlinks = [
     },
     {
         name: "Resume",
-        link: "https://drive.google.com/file/d/1QQZIG3G0yR1Qs7m_sFg6O9BWjvJYiKZ_/view",
+        link: "https://drive.google.com/file/d/1NZMM3izrmS2at8xRg5UyELZ3eM-A1w-h/view?usp=sharing",
         icon: resume,
     },
     {

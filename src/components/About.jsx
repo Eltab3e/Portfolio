@@ -85,10 +85,10 @@ const About = () => {
                 variants={fadeIn("", "", 0.1, 1)}
                 className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
             >
-                A self-taught Front-end Developer with 1 year of hands-on experience, passionate
-                about tackling complex challenges, creating user-friendly interfaces, and crafting
-                exceptional, visually appealing user experiences prioritizing usability and
-                performance. <br />
+                A self-taught Front-end Developer with nearly two years of hands-on experience, I'm
+                driven by a passion for tackling complex challenges, creating user-friendly
+                interfaces, and crafting exceptional, visually appealing user experiences
+                prioritizing usability and performance. <br />
                 <br />
                 My expertise lies in working with popular frameworks like{" "}
                 <a
@@ -106,7 +106,8 @@ const About = () => {
                 </a>
                 , allowing me to craft visually stunning and interactive websites. I thrive in
                 collaborative environments and actively seek opportunities to collaborate within
-                dynamic teams.
+                dynamic teams, I aim to contribute my evolving expertise and enthusiasm to elevate
+                user experiences and exceed goals.
             </motion.p>
 
             <div className="mt-20 flex flex-wrap justify-center gap-10">

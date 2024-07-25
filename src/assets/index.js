@@ -6,10 +6,6 @@ import icon4 from "./about/icon4.png";
 import bona from "./experience/bona.svg";
 import upwork from "./experience/upwork.svg";
 
-import githublogo from "./footer/githublogo.png";
-import linkedin from "./footer/linkedin.svg";
-import resume from "./footer/resume.png";
-
 import logo from "./others/logo.svg";
 import cs50 from "./others/cs50.png";
 import menu from "./others/menu.svg";
@@ -36,8 +32,12 @@ import rtk from "./tech/rtk.png";
 import styledcomponents from "./tech/styledcomponents.png";
 import tailwind from "./tech/tailwind.png";
 import sass from "./tech/sass.png";
+import jest from "./tech/jest.png";
 import github from "./tech/github.png";
-import threejs from "./tech/threejs.png";
+
+import linkedin from "./footer/linkedin.svg";
+import resume from "./footer/resume.png";
+import githublogo from "./footer/githublogo.png";
 
 export {
     icon1,
@@ -71,8 +71,8 @@ export {
     reactquery,
     rtk,
     styledcomponents,
-    sass,
     tailwind,
+    sass,
+    jest,
     github,
-    threejs,
 };
