@@ -3,6 +3,7 @@ import {
     icon2,
     icon3,
     icon4,
+    illa,
     bona,
     upwork,
     cs50,
@@ -134,11 +135,25 @@ const technologies = [
 
 const experiences = [
     {
-        title: "Front-end Developer",
+        title: "Frontend Developer",
+        company_name: "ILLA",
+        icon: illa,
+        iconBg: "#E6DEDD",
+        date: "Nov 2024 - Present",
+        points: [
+            "Implemented complex form handling and validation using React Hook Form.",
+            "Integrated Google Maps APIs to visualize data such as routes, locations, and coordinates.",
+            "Worked closely with designers to refine UI layouts and improve overall user experience consistency.",
+            "Participated in agile development cycles, contributing to sprint planning, code reviews, and testing.",
+            "Added Mixpanel and Google Analytics integration to gather insights into platform engagement, monitor user interactions, and feature performance.",
+        ],
+    },
+    {
+        title: "Frontend Developer",
         company_name: "Bona Invest",
         icon: bona,
         iconBg: "#E6DEDD",
-        date: "Apr 2023 - May 2024",
+        date: "Aug 2023 - Sep 2024",
         points: [
             "Conducted extensive testing and debugging to ensure system reliability.",
             "Implemented robust user authentication and secure routes for data privacy.",
@@ -147,16 +162,14 @@ const experiences = [
         ],
     },
     {
-        title: "Front-end Developer",
+        title: "Frontend Developer",
         company_name: "Upwork",
         icon: upwork,
         iconBg: "#E6DEDD",
-        date: "Dec 2022 - Apr 2023",
+        date: "Jan 2023 - Jul 2023",
         points: [
             "Transformed Figma design concepts into dynamic, responsive React applications.",
-            "Ensured seamless cross-browser compatibility and responsiveness across various devices.",
-            "Utilized Git for version control, facilitating collaboration and code management throughout the development process.",
-            "Employed advanced optimization strategies enhancing loading times by up to 50% and improving overall user experiences.",
+            "Employed advanced optimization strategies, enhancing loading times and improving overall user experiences.",
         ],
     },
 ];
@@ -352,7 +365,7 @@ const footerlinks = [
     },
     {
         name: "Resume",
-        link: "https://drive.google.com/file/d/1NZMM3izrmS2at8xRg5UyELZ3eM-A1w-h/view?usp=sharing",
+        link: "https://drive.google.com/file/d/1mLpRjUc4tbmJrQ-5X8fZ2ml1DOJOzDwJ/view?usp=sharing",
         icon: resume,
     },
     {

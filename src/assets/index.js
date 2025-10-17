@@ -3,6 +3,7 @@ import icon2 from "./about/icon2.png";
 import icon3 from "./about/icon3.png";
 import icon4 from "./about/icon4.png";
 
+import illa from "./experience/illa.jpeg";
 import bona from "./experience/bona.svg";
 import upwork from "./experience/upwork.svg";
 
@@ -44,6 +45,7 @@ export {
     icon2,
     icon3,
     icon4,
+    illa,
     bona,
     upwork,
     githublogo,
