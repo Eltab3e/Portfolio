@@ -1,5 +1,5 @@
-import { styles } from "../styles";
 import { footerlinks } from "../constants";
+import { styles } from "../styles";
 
 function Footer() {
     return (

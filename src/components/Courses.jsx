@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
-import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-
-import { styles } from "../styles";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import PropTypes from "prop-types";
 import { courses } from "../constants";
 import { textVariant } from "../utils/motion";
 import SectionWrapper from "../hoc/SectionWrapper";
+import { styles } from "../styles";
 
-const CourseCard = ({ title, company_name, icon, iconBg, date, points }) => {
+const CourseCard = ({ title, company_name, icon, iconBg, points }) => {
     return (
         <VerticalTimelineElement
             contentStyle={{
@@ -15,7 +15,6 @@ const CourseCard = ({ title, company_name, icon, iconBg, date, points }) => {
                 color: "#fff",
             }}
             contentArrowStyle={{ borderRight: "7px solid  #232631" }}
-            date={date}
             iconStyle={{ background: iconBg }}
             icon={
                 <div className="flex justify-center items-center w-full h-full">
@@ -51,6 +50,14 @@ const CourseCard = ({ title, company_name, icon, iconBg, date, points }) => {
     );
 };
 
+CourseCard.propTypes = {
+    title: PropTypes.string.isRequired,
+    company_name: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    iconBg: PropTypes.string.isRequired,
+    points: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
 const Courses = () => {
     return (
         <>
@@ -74,4 +81,5 @@ const Courses = () => {
     );
 };
 
-export default SectionWrapper(Courses, "courses");
+const CoursesComponent = SectionWrapper(Courses, "courses");
+export default CoursesComponent;

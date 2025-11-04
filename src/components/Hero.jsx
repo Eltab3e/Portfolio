@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
-import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
 import { mobilebg } from "../assets/index.js";
+import { ComputersCanvas } from "./canvas";
+import { styles } from "../styles";
 
 const Hero = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -35,7 +34,7 @@ const Hero = () => {
 
                 <div>
                     <h1 className={`${styles.heroHeadText} text-white`}>
-                        Hi, I'm <span className="text-[#915EFF]">Ahmed</span>
+                        Hi, I&apos;m <span className="text-[#915EFF]">Ahmed</span>
                     </h1>
                     <p className={`${styles.heroSubText} mt-2 text-white-100`}>
                         I specialize in crafting stunning <br className="sm:block hidden" /> web

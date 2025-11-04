@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-
-import { styles } from "../styles";
 import { experiences } from "../constants";
 import { textVariant } from "../utils/motion";
 import SectionWrapper from "../hoc/SectionWrapper";
+import { styles } from "../styles";
 
 const ExperienceCard = ({ title, company_name, icon, iconBg, date, points }) => {
     return (
@@ -51,6 +51,15 @@ const ExperienceCard = ({ title, company_name, icon, iconBg, date, points }) => 
     );
 };
 
+ExperienceCard.propTypes = {
+    title: PropTypes.string.isRequired,
+    company_name: PropTypes.string.isRequired,
+    icon: PropTypes.string.isRequired,
+    iconBg: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired,
+    points: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
 const Experience = () => {
     return (
         <>
@@ -74,4 +83,5 @@ const Experience = () => {
     );
 };
 
-export default SectionWrapper(Experience, "experience");
+const ExperienceComponent = SectionWrapper(Experience, "experience");
+export default ExperienceComponent;

@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
-import { styles } from "../styles";
 import { BallCanvas } from "./canvas";
 import { technologies } from "../constants";
 import { textVariant } from "../utils/motion";
 import SectionWrapper from "../hoc/SectionWrapper";
+import { styles } from "../styles";
 
 const Tech = () => {
     const [isMobile, setIsMobile] = useState(false);
@@ -37,8 +36,6 @@ const Tech = () => {
                     <div
                         className="w-28 h-28"
                         key={`technology-${index}`}
-                        index={index}
-                        {...technology}
                     >
                         {isMobile && (
                             <div className="green-pink-gradient p-[1px] rounded-[20px] shadow-card">
@@ -60,4 +57,5 @@ const Tech = () => {
     );
 };
 
-export default SectionWrapper(Tech, "tech");
+const TechComponent = SectionWrapper(Tech, "tech");
+export default TechComponent;

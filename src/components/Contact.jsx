@@ -1,21 +1,20 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
-
-import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
+import { EarthCanvas } from "./canvas";
 import SectionWrapper from "../hoc/SectionWrapper";
+import { styles } from "../styles";
 
 const Contact = () => {
-    const formRef = useRef();
+    const [loading, setLoading] = useState(false);
     const [form, setForm] = useState({
         name: "",
         email: "",
         message: "",
     });
 
-    const [loading, setLoading] = useState(false);
+    const formRef = useRef();
 
     const handleChange = (e) => {
         const { target } = e;
@@ -29,6 +28,16 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        if (!form.name || !form.email || !form.message) {
+            alert("Please fill in all fields before sending.");
+            return;
+        }
+        if (!form.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
         setLoading(true);
 
         emailjs
@@ -44,11 +53,26 @@ const Contact = () => {
                 },
                 import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
             )
+            .then(() => {
+                return emailjs.send(
+                    import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+                    import.meta.env.VITE_APP_EMAILJS_AUTOREPLY_TEMPLATE_ID,
+                    {
+                        from_name: import.meta.env.VITE_APP_USERNAME,
+                        to_name: form.name,
+                        from_email: import.meta.env.VITE_APP_EMAILJS_ADDRESS,
+                        to_email: form.email,
+                        message: form.message,
+                    },
+                    import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
+                );
+            })
             .then(
                 () => {
+                    alert(
+                        "Thank you for your message! I'll get back to you soon. You should receive a confirmation email shortly."
+                    );
                     setLoading(false);
-                    alert("Thank you. I will get back to you as soon as possible.");
-
                     setForm({
                         name: "",
                         email: "",
@@ -57,7 +81,9 @@ const Contact = () => {
                 },
                 (error) => {
                     setLoading(false);
-                    alert("Ahh, something went wrong. Please try again.");
+                    if (error || error.status === 400) {
+                        alert(`Failed to send message, Please try again.`);
+                    }
                 }
             );
     };
@@ -129,4 +155,5 @@ const Contact = () => {
     );
 };
 
-export default SectionWrapper(Contact, "contact");
+const ContactComponent = SectionWrapper(Contact, "contact");
+export default ContactComponent;

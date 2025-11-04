@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-
-import { styles } from "../styles";
+import PropTypes from "prop-types";
 import { githublogo } from "../assets";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import SectionWrapper from "../hoc/SectionWrapper";
+import { styles } from "../styles";
 
 const ProjectCard = ({ index, name, description, tags, image, source_code_link }) => {
     const [isMobile, setIsMobile] = useState(false);
@@ -112,6 +112,20 @@ const ProjectCard = ({ index, name, description, tags, image, source_code_link }
     );
 };
 
+ProjectCard.propTypes = {
+    index: PropTypes.number.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(
+        PropTypes.shape({
+            name: PropTypes.string.isRequired,
+            color: PropTypes.string.isRequired,
+        })
+    ).isRequired,
+    image: PropTypes.string.isRequired,
+    source_code_link: PropTypes.string.isRequired,
+};
+
 const Projects = () => {
     return (
         <>
@@ -143,4 +157,5 @@ const Projects = () => {
     );
 };
 
-export default SectionWrapper(Projects, "projects");
+const ProjectsComponent = SectionWrapper(Projects, "projects");
+export default ProjectsComponent;
