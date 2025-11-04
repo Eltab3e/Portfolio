@@ -365,7 +365,7 @@ const footerlinks = [
     },
     {
         name: "Resume",
-        link: "https://drive.google.com/file/d/1mLpRjUc4tbmJrQ-5X8fZ2ml1DOJOzDwJ/view?usp=sharing",
+        link: "https://drive.google.com/file/d/1pNJnV5zcVFuXFUEg-vs7y-bQpwqCNX8F/view?usp=sharing",
         icon: resume,
     },
     {

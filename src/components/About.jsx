@@ -85,8 +85,8 @@ const About = () => {
                 variants={fadeIn("", "", 0.1, 1)}
                 className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
             >
-                A self-taught Front-end Developer with nearly three years of practical experience
-                building modern, responsive web applications using{" "}
+                A self-taught Front-end Developer with three years of practical experience building
+                modern, responsive web applications using{" "}
                 <a
                     href="https://react.dev/"
                     className="text-[#915eff]"
