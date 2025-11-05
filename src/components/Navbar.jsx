@@ -5,23 +5,65 @@ import { logo, menu, close } from "../assets";
 import { styles } from "../styles";
 
 const Navbar = () => {
-    const [active, setActive] = useState("");
+    const [active, setActive] = useState("About");
     const [toggle, setToggle] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollTop = window.scrollY;
+
             if (scrollTop > 100) {
                 setScrolled(true);
             } else {
                 setScrolled(false);
             }
+
+            const sections = navLinks.map((link) => ({
+                id: link.id,
+                title: link.title,
+                element: document.getElementById(link.id),
+            }));
+
+            let detectedSection = null;
+
+            for (const section of sections) {
+                if (section.element) {
+                    const rect = section.element.getBoundingClientRect();
+                    const elementTop = rect.top + window.scrollY;
+                    const elementBottom = elementTop + rect.height;
+
+                    if (scrollTop >= elementTop - 200 && scrollTop < elementBottom - 200) {
+                        detectedSection = section.title;
+                        break;
+                    }
+                }
+            }
+
+            if (detectedSection) {
+                setActive(detectedSection);
+            } else if (scrollTop < 200) {
+                setActive("About");
+            }
         };
 
-        window.addEventListener("scroll", handleScroll);
+        const handleHashChange = () => {
+            const hash = window.location.hash.replace("#", "");
+            const link = navLinks.find((l) => l.id === hash);
+            if (link) {
+                setActive(link.title);
+            }
+        };
 
-        return () => window.removeEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll, { passive: true });
+        window.addEventListener("hashchange", handleHashChange);
+
+        setTimeout(handleScroll, 100);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("hashchange", handleHashChange);
+        };
     }, []);
 
     return (
@@ -52,10 +94,23 @@ const Navbar = () => {
                             key={link.id}
                             className={`${
                                 active === link.title ? "text-[#915eff]" : "text-secondary"
-                            } hover:text-[#915eff] text-[18px] font-medium cursor-pointer`}
-                            onClick={() => setActive(link.title)}
+                            } hover:text-[#915eff] text-[18px] font-medium cursor-pointer transition-colors duration-200 relative`}
                         >
-                            <a href={`#${link.id}`}>{link.title}</a>
+                            <a
+                                href={`#${link.id}`}
+                                onClick={() => {
+                                    setActive(link.title);
+                                    setTimeout(() => {
+                                        const scrollEvent = new Event("scroll");
+                                        window.dispatchEvent(scrollEvent);
+                                    }, 100);
+                                }}
+                            >
+                                {link.title}
+                                {active === link.title && (
+                                    <span className="absolute bottom-[-4px] left-0 w-full h-[2px] bg-[#915eff] rounded-full" />
+                                )}
+                            </a>
                         </li>
                     ))}
                 </ul>
@@ -79,13 +134,23 @@ const Navbar = () => {
                                     key={link.id}
                                     className={`font-poppins font-medium cursor-pointer text-[16px] ${
                                         active === link.title ? "text-white" : "text-secondary"
-                                    }`}
+                                    } hover:text-white transition-colors duration-200`}
                                     onClick={() => {
                                         setToggle(!toggle);
-                                        setActive(link.title);
                                     }}
                                 >
-                                    <a href={`#${link.id}`}>{link.title}</a>
+                                    <a
+                                        href={`#${link.id}`}
+                                        onClick={() => {
+                                            setActive(link.title);
+                                            setTimeout(() => {
+                                                const scrollEvent = new Event("scroll");
+                                                window.dispatchEvent(scrollEvent);
+                                            }, 100);
+                                        }}
+                                    >
+                                        {link.title}
+                                    </a>
                                 </li>
                             ))}
                         </ul>
