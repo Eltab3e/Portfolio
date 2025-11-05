@@ -32,8 +32,9 @@ const Navbar = () => {
                     const rect = section.element.getBoundingClientRect();
                     const elementTop = rect.top + window.scrollY;
                     const elementBottom = elementTop + rect.height;
+                    const viewportMiddle = scrollTop + window.innerHeight / 2;
 
-                    if (scrollTop >= elementTop - 200 && scrollTop < elementBottom - 200) {
+                    if (viewportMiddle >= elementTop && viewportMiddle < elementBottom) {
                         detectedSection = section.title;
                         break;
                     }
