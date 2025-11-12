@@ -12,13 +12,13 @@ import {
     css,
     javascript,
     typescript,
-    reactjs,
-    next,
+    react,
+    nextjs,
     reactquery,
     rtk,
-    styledcomponents,
+    antd,
     tailwind,
-    sass,
+    reacthookform,
     jest,
     github,
     gamescope,
@@ -96,12 +96,12 @@ const technologies = [
         icon: typescript,
     },
     {
-        name: "React JS",
-        icon: reactjs,
+        name: "React",
+        icon: react,
     },
     {
         name: "Next",
-        icon: next,
+        icon: nextjs,
     },
     {
         name: "React Query",
@@ -112,16 +112,16 @@ const technologies = [
         icon: rtk,
     },
     {
-        name: "Styled Components",
-        icon: styledcomponents,
+        name: "Ant Design",
+        icon: antd,
     },
     {
         name: "Tailwind CSS",
         icon: tailwind,
     },
     {
-        name: "SASS",
-        icon: sass,
+        name: "React Hook Form",
+        icon: reacthookform,
     },
     {
         name: "Jest",
@@ -135,7 +135,7 @@ const technologies = [
 
 const experiences = [
     {
-        title: "Frontend Developer",
+        title: "Mid-Senior Frontend Developer",
         company_name: "ILLA",
         icon: illa,
         iconBg: "#E6DEDD",
@@ -202,7 +202,7 @@ const courses = [
     {
         title: "Web Development Bootcamp 1",
         company_name: "Scrimba",
-        icon: reactjs,
+        icon: react,
         iconBg: "#383E56",
         points: [
             "Successfully developed robust and high-performance web applications that deliver exceptional user experiences with their speed, responsiveness, and user-friendly interfaces.",
@@ -214,7 +214,7 @@ const courses = [
     {
         title: "Web Development Bootcamp 2",
         company_name: "Udemy",
-        icon: next,
+        icon: nextjs,
         iconBg: "#E6DEDD",
         points: [
             "Acquired a comprehensive understanding of essential Next.js features, including pre-rendering techniques, server-side rendering (SSR), efficient data fetching, file-based routing, and authentication mechanisms.",
@@ -231,7 +231,7 @@ const projects = [
         description: "Your one-stop destination for all things gaming.",
         tags: [
             {
-                name: "next.js",
+                name: "nextjs",
                 color: "orange-text-gradient",
             },
             {
@@ -255,7 +255,7 @@ const projects = [
         description: "Luxury cars rental website with advanced filters and search functionality.",
         tags: [
             {
-                name: "next.js",
+                name: "nextjs",
                 color: "orange-text-gradient",
             },
             {

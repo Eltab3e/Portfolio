@@ -26,13 +26,13 @@ import html from "./tech/html.png";
 import css from "./tech/css.png";
 import javascript from "./tech/javascript.png";
 import typescript from "./tech/typescript.png";
-import reactjs from "./tech/reactjs.png";
-import next from "./tech/next.png";
+import react from "./tech/react.png";
+import nextjs from "./tech/nextjs.png";
 import reactquery from "./tech/reactquery.png";
 import rtk from "./tech/rtk.png";
-import styledcomponents from "./tech/styledcomponents.png";
+import antd from "./tech/antd.png";
 import tailwind from "./tech/tailwind.png";
-import sass from "./tech/sass.png";
+import reacthookform from "./tech/reacthookform.png";
 import jest from "./tech/jest.png";
 import github from "./tech/github.png";
 
@@ -68,13 +68,13 @@ export {
     css,
     javascript,
     typescript,
-    reactjs,
-    next,
+    react,
+    nextjs,
     reactquery,
     rtk,
-    styledcomponents,
+    antd,
     tailwind,
-    sass,
+    reacthookform,
     jest,
     github,
 };
